@@ -33,29 +33,26 @@ export const BoxApproved = {
 };
 
 export const userData = {
-  labels: ["Red", "Blue", "Yellow"],
+  labels: ["New", "Returning", "Inactive"],
   datasets: [
     {
       label: "Users",
       data: [57, 31, 12],
       backgroundColor: ["#43b430", "#ffbc11", "#f3f3f3"],
       number: 4890,
-      new: 57,
-      returning: 31,
-      inactive: 12,
+
       hoverOffset: 4,
     },
   ],
 };
 
 export const subData = {
-  labels: ["blue", "purple"],
+  labels: ["Paid", "Trail"],
   datasets: [
     {
       label: "Subscriptions",
       data: [71, 29],
-      paid: 71,
-      trail: 29,
+
       backgroundColor: ["#4578f9", "#cb3eff"],
       number: 1223,
       hoverOffset: 4,

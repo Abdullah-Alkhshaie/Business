@@ -8,9 +8,16 @@ import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
 import Navbar from "./components/Navbar";
 import { useStateContext } from "./context/contextProvider";
+import { Chart, registerables } from "chart.js";
+import { useEffect } from "react";
 
 function App() {
   const { activeMenu } = useStateContext();
+
+  useEffect(() => {
+    // Register required elements and scales
+    Chart.register(...registerables);
+  }, []);
 
   return (
     <div className="bg-gray-100">
