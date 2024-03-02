@@ -24,7 +24,7 @@ defaults.responsive = true;
 const customOptions = {
   plugins: {
     legend: {
-      position: "left",
+      position: "left" as "left" | "right" | "top" | "bottom", // Specify allowed position
       labels: {
         fontColor: "#333333",
         fontSize: 14,

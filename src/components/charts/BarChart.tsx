@@ -2,9 +2,6 @@ import { Chart, registerables } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { useEffect, useState } from "react";
 
-interface YearData {
-  [key: string]: number[];
-}
 type YearColors = { [key: string]: string };
 
 function BarChart() {
@@ -16,8 +13,9 @@ function BarChart() {
     Chart.register(...registerables);
   }, []);
 
-  const formatTick = (tickValue: string) => {
-    const numberValue = parseInt(tickValue);
+  const formatTick = (tickValue: string | number) => {
+    // Accept string or number
+    const numberValue = parseInt(tickValue.toString()); // Ensure Number conversion
 
     return (
       numberValue.toLocaleString("en-US", {

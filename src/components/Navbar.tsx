@@ -21,12 +21,12 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (screenSize <= 900) {
+    if ((screenSize as number) <= 900) {
       setActiveMenu(false);
     } else {
       setActiveMenu(true);
     }
-  }, [screenSize]);
+  }, [screenSize, setActiveMenu]);
 
   const getNavbarTitle = (pathname: string) => {
     switch (pathname) {
